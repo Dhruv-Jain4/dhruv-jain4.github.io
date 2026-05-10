@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MindDump — The app that forgets on purpose. A mental clarity tool to dump your thoughts, worries, and ideas." />
+  <title>MindDump — The app that forgets on purpose</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0d0d10;
+      --surface: #18181c;
+      --accent: #a78bfa;
+      --accent-dim: rgba(167, 139, 250, 0.12);
+      --text-primary: #f0f0f5;
+      --text-muted: #8a8a9a;
+      --border: rgba(255,255,255,0.07);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text-primary);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 24px;
+    }
+
+    .container {
+      max-width: 580px;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Logo mark */
+    .logo-mark {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 72px;
+      height: 72px;
+      border-radius: 20px;
+      background: var(--accent-dim);
+      border: 1px solid rgba(167, 139, 250, 0.25);
+      margin-bottom: 36px;
+    }
+
+    .logo-mark svg {
+      width: 36px;
+      height: 36px;
+      stroke: var(--accent);
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* Tag */
+    .tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-dim);
+      border: 1px solid rgba(167, 139, 250, 0.2);
+      border-radius: 20px;
+      padding: 4px 14px;
+      margin-bottom: 20px;
+    }
+
+    /* Headline */
+    h1 {
+      font-size: clamp(38px, 8vw, 64px);
+      font-weight: 700;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      color: var(--text-primary);
+      margin-bottom: 16px;
+    }
+
+    /* Tagline */
+    .tagline {
+      font-size: 17px;
+      font-weight: 400;
+      color: var(--text-muted);
+      font-style: italic;
+      margin-bottom: 48px;
+      line-height: 1.6;
+    }
+
+    /* Description */
+    .description {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 56px;
+    }
+
+    /* Divider */
+    .divider {
+      width: 40px;
+      height: 1px;
+      background: var(--border);
+      margin: 0 auto 56px;
+    }
+
+    /* Footer links */
+    .links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .links a {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-muted);
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .links a:hover {
+      color: var(--accent);
+      border-color: rgba(167, 139, 250, 0.3);
+    }
+
+    .links .sep {
+      color: var(--border);
+      font-size: 14px;
+    }
+
+    /* Dev credit */
+    .dev-credit {
+      margin-top: 48px;
+      font-size: 12px;
+      color: rgba(138, 138, 154, 0.5);
+    }
+
+    .dev-credit span {
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    @media (max-width: 480px) {
+      .links { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Logo -->
+    <div class="logo-mark">
+      <!-- Brain / mind icon -->
+      <svg viewBox="0 0 24 24">
+        <path d="M9.5 2a5.5 5.5 0 0 0-5.5 5.5c0 1.03.28 1.99.77 2.81A4 4 0 0 0 2 14a4 4 0 0 0 3.29 3.93 5.5 5.5 0 0 0 10.42 0A4 4 0 0 0 19 14a4 4 0 0 0-2.77-3.69A5.5 5.5 0 0 0 9.5 2z"/>
+        <line x1="9.5" y1="2" x2="9.5" y2="22"/>
+        <line x1="9.5" y1="10" x2="5" y2="10"/>
+        <line x1="9.5" y1="14" x2="5.5" y2="14"/>
+        <line x1="9.5" y1="18" x2="6" y2="18"/>
+      </svg>
+    </div>
+
+    <!-- Tag -->
+    <div class="tag">Productivity · Wellbeing</div>
+
+    <!-- Headline -->
+    <h1>MindDump</h1>
+
+    <!-- Tagline -->
+    <p class="tagline">"The app that forgets on purpose."</p>
+
+    <!-- Description -->
+    <p class="description">
+      A pocket-sized mental clarity tool. Dump your worries, ideas, and tasks the moment they hit you — then let them be processed, scheduled, and forgotten. MindDump is offline-first, private by design, and built to quiet the noise in your head.
+    </p>
+
+    <div class="divider"></div>
+
+    <!-- Links -->
+    <div class="links">
+      <a href="./privacy.html">Privacy Policy</a>
+    </div>
+
+    <!-- Dev credit -->
+    <p class="dev-credit">Made by <span> @dhruv-jain4 </span> &nbsp;·&nbsp; developer name : 
+dhruv@Makeyoursoftware </p>
+
+  </div>
+</body>
+</html>
